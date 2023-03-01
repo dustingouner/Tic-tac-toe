@@ -4,7 +4,8 @@ class Game {
     this.player2= new Player()
     this.winner = false
     this.playerTurn = 1
-    
+    this.gameData = []
+
 
   }
   declareWinner() {

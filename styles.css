@@ -1,0 +1,68 @@
+html, body {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.center-container {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: solid black;
+  border-right: solid black;
+}
+
+.pete {
+  height: 100px;
+  width: 100px;
+  mix-blend-mode: multiply;
+}
+
+.kanye {
+  height: 100px;
+  width: 100px;
+  mix-blend-mode: multiply;
+}
+
+.top-message {
+  height: 20%;
+  margin-top: 0%;
+}
+
+.game-board-container {
+  height: 70%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: lightgreen;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 2em;
+}
+
+.right-border {
+  border-right: 0.4em solid blue
+}
+
+.bottom-border {
+  border-bottom: 0.4em solid blue
+}
+

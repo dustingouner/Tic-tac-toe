@@ -1,11 +1,22 @@
 class Game {
   constructor() {
-    this.player1 = new Player()
-    this.player2= new Player()
+    this.player1 = new Player(1, 'X')
+    this.player2= new Player(2, 'O')
     this.winner = false
-    this.playerTurn = 1
+    this.playerTurn = 'X'
+    this.firstPlayer = 'X'
+    this.draw = 'false'
+    this.turns = 0
     
 
+  }
+  takeTurn() {
+    console.log('change turns')
+    if (this.playerTurn === 'X') {
+      this.playerTurn = 'O'
+    } else {
+      this.playerTurn = 'X'
+    }
   }
   declareWinner() {
     var waysToWin = [
@@ -28,9 +39,7 @@ class Game {
 
   }
   checkForDraw() {
-
-  }
-  takeTurn() {
+    
 
   }
   resetGameBoard() {

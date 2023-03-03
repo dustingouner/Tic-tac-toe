@@ -11,7 +11,11 @@ html, body {
   flex-direction: column;
   width: 20%;
   align-items: center;
-  background-color: lightgrey;
+  opacity: 0.3;
+  background-image:  linear-gradient(135deg, #545567 25%, transparent 25%), linear-gradient(225deg, #545567 25%, transparent 25%), linear-gradient(45deg, #545567 25%, transparent 25%), linear-gradient(315deg, #545567 25%, #141425 25%);
+  background-position:  12px 0, 12px 0, 0 0, 0 0;
+  background-size: 12px 12px;
+  background-repeat: repeat;
 }
 
 .center-container {
@@ -40,6 +44,7 @@ html, body {
 .top-message {
   height: 20%;
   margin-top: 0%;
+  font-size: 30px;
 }
 
 .game-board-container {
@@ -65,4 +70,6 @@ div {
 .bottom-border {
   border-bottom: 0.4em solid blue
 }
+
+
 

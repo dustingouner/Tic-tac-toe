@@ -3,7 +3,7 @@ class Player {
     this.id = id
     this.token = token
     this.wins = 0
-    this.boardPosition = []
+    this.boardSpot = []
   }
   addWins() {
     this.wins += 1

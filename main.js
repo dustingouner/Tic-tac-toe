@@ -13,6 +13,9 @@ var box6 = document.getElementById('6')
 var box7 = document.getElementById('7')
 var box8 = document.getElementById('8')
 var box9 = document.getElementById('9')
+var image = document.querySelectorAll('box-token')
+
+
 
 var boxes = [box1, box2, box3, box4, box5, box6, box7, box8, box9]
 // ----EVENT LISTENERS------
@@ -40,33 +43,43 @@ function displayPage() {
 
 // const image = document.createElement("img").src = "/Users/dustingouner/Mod1/Tic-tac-toe/assets/kanye.jpeg";
 // box.innerHTML = ""; // remove any text from the box
-// box.append(image); // add the image inside of your element  
+// box.append(image); // add the image inside of your element 
+
+// var img = document.createElement('img').src = "http:/assets/kanye.jpeg"
+
 
 
 function playGame(event) {
-  if (thisGame.activeGame === true) {
+  if (thisGame.activeGame) {
     for (var i = 0; i < boxes.length; i++) {
       if (thisGame.playerTurn === 'X') {
         if (boxes[i].id === event.target.id) {
-          boxes[i].innerText = thisGame.player1.token
-          //  boxes[i].innerHTML = ''
-          //  boxes[i].append(kanye)
+          document.getElementById(`box-token ${boxes[i].id}`).src = "assets/kanye.jpeg"
            updatePlayerOneStats()
            disableSquare()
            thisGame.declareWinner()
+           if(thisGame.winner) {
+            player1Wins.innerText = `Wins:${thisGame.player1.wins}`
+            thisGame.resetGameBoard()
+           }
       }
   
       } else if (thisGame.playerTurn === 'O') {
         if (boxes[i].id === event.target.id) {
-           boxes[i].innerText = thisGame.player2.token
+          document.getElementById(`box-token ${boxes[i].id}`).src = "assets/pete.jpeg"
            updatePlayerTwoStats()
            disableSquare()
            thisGame.declareWinner()
+           if(thisGame.winner) {
+            player1Wins.innerText = `Wins:${thisGame.player1.wins}`
+            thisGame.resetGameBoard()
+           }
       }
     }
 
     }
   thisGame.takeTurn()
+  topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
 }
 }
 
@@ -87,3 +100,6 @@ function updatePlayerTwoStats() {
   thisGame.turns += 1
 }
 
+
+// var image = document.getElementById(box-token)
+// image.src = "assets/kanye.jpeg"

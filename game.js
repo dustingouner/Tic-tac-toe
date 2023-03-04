@@ -8,11 +8,8 @@ class Game {
     this.activeGame = true
     this.draw = 'false'
     this.winner = false
-    this.gameBoard = [0,0,0,0,0,0,0,0,0]
     
-
-  }
-  takeTurn() {
+  }takeTurn() {
     if (this.playerTurn === 'X') {
       this.playerTurn = 'O'
     } else {
@@ -50,6 +47,7 @@ class Game {
          this.activeGame = false
        }
     }
+    this.checkForDraw()
   }
   updateGameBoard(id) {
     this.gameBoard[id] = this.playerTurn

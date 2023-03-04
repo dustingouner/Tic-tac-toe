@@ -13,7 +13,8 @@ var box6 = document.getElementById('6')
 var box7 = document.getElementById('7')
 var box8 = document.getElementById('8')
 var box9 = document.getElementById('9')
-var image = document.querySelectorAll('box-token')
+var box =  document.querySelectorAll('.box')
+var image = document.querySelectorAll('.box-token')
 
 
 
@@ -31,6 +32,7 @@ box6.addEventListener('click', playGame)
 box7.addEventListener('click', playGame)
 box8.addEventListener('click', playGame)
 box9.addEventListener('click', playGame)
+// box.addEventListener('click', play)
 
 
 // -----FUNCTIONS------
@@ -41,46 +43,41 @@ function displayPage() {
   player2Wins.innerHTML = `Wins: ${thisGame.player2.wins}`
 }
 
-// const image = document.createElement("img").src = "/Users/dustingouner/Mod1/Tic-tac-toe/assets/kanye.jpeg";
-// box.innerHTML = ""; // remove any text from the box
-// box.append(image); // add the image inside of your element 
-
-// var img = document.createElement('img').src = "http:/assets/kanye.jpeg"
-
-
 
 function playGame(event) {
   if (thisGame.activeGame) {
     for (var i = 0; i < boxes.length; i++) {
       if (thisGame.playerTurn === 'X') {
         if (boxes[i].id === event.target.id) {
-          document.getElementById(`box-token ${boxes[i].id}`).src = "assets/kanye.jpeg"
-           updatePlayerOneStats()
-           disableSquare()
-           thisGame.declareWinner()
-           if(thisGame.winner) {
+          boxes[i].innerHTML = ''
+          boxes[i].innerHTML += `<img class="box-token" src="assets/kanye.jpeg" alt="">`
+          updatePlayerOneStats()
+          disableSquare()
+          thisGame.declareWinner()
+          if(thisGame.winner) {
             player1Wins.innerText = `Wins:${thisGame.player1.wins}`
+            topMessage.innerText = 'Kanye Won!'
             thisGame.resetGameBoard()
-           }
+          }
       }
-  
-      } else if (thisGame.playerTurn === 'O') {
+    } else if (thisGame.playerTurn === 'O') {
         if (boxes[i].id === event.target.id) {
-          document.getElementById(`box-token ${boxes[i].id}`).src = "assets/pete.jpeg"
-           updatePlayerTwoStats()
-           disableSquare()
-           thisGame.declareWinner()
-           if(thisGame.winner) {
-            player1Wins.innerText = `Wins:${thisGame.player1.wins}`
+        boxes[i].innerHTML = ''
+        updatePlayerTwoStats()
+        boxes[i].innerHTML += `<img class="box-token" src="assets/pete.jpeg" alt="">`
+        disableSquare()
+        thisGame.declareWinner()
+          if(thisGame.winner) {
+            player2Wins.innerText = `Wins:${thisGame.player2.wins}`
+            topMessage.innerText = 'Pete Won!'
             thisGame.resetGameBoard()
-           }
+        }
       }
     }
-
-    }
+  }
   thisGame.takeTurn()
   topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
-}
+  }
 }
 
 
@@ -99,6 +96,14 @@ function updatePlayerTwoStats() {
   thisGame.player2.boardSpot.push(parseInt(event.target.id))
   thisGame.turns += 1
 }
+
+// function displayGameResult() {
+//   if ()
+// }
+
+// function clearBoard() {
+
+// }
 
 
 // var image = document.getElementById(box-token)

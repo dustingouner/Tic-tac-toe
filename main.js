@@ -7,24 +7,24 @@ var gameBoardContainer = document.querySelector('.game-board-container')
 
 // ----EVENT LISTENERS------
 
-window.addEventListener('load', displayPage)
+// window.addEventListener('load', displayPage)
 gameBoardContainer.addEventListener('click', playGame)
 
 // -----FUNCTIONS------
 
-function displayPage() {
-  topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
-  player1Wins.innerHTML = `Wins: ${thisGame.player1.wins}`
-  player2Wins.innerHTML = `Wins: ${thisGame.player2.wins}`
-}
+// function displayPage() {
+//   topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
+//   player1Wins.innerHTML = `Wins: ${thisGame.player1.wins}`
+//   player2Wins.innerHTML = `Wins: ${thisGame.player2.wins}`
+// }
 
 function playGame(event) {
-  if(event.target.innerHTML === '' && thisGame.winner === null) {
+  if (event.target.innerHTML === '' && thisGame.winner === null) {
     var boxID = parseInt(event.target.dataset.indexNumber)
     event.target.innerHTML += `<img class="box-token" src="${thisGame.playerTurn.token}" alt="">`
     thisGame.takeTurn(boxID)
     thisGame.declareWinner()
-  if(thisGame.winner !== null || thisGame.draw) {
+  if (thisGame.winner !== null || thisGame.draw) {
     displayResults()
     } 
   }

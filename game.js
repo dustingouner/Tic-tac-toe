@@ -24,7 +24,7 @@ class Game {
     }
     thisGame.turns += 1
   }
-  checkForWinner() {
+  declareWinner() {
     var waysToWin = [
     [1,2,3],
     [4,5,6],
@@ -57,9 +57,8 @@ class Game {
     this.checkForDraw()
   }
   checkForDraw() {
-    if (this.turns === 9 && this.winner === false) {
+    if (this.turns === 9 && this.winner === null) {
       this.draw = true
-      this.activeGame = false
     }
   }
   resetGameBoard() {

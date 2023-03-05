@@ -3,7 +3,7 @@ var thisGame = new Game()
 var topMessage = document.querySelector('.top-message')
 var player1Wins = document.querySelector('.player-1-wins')
 var player2Wins = document.querySelector('.player-2-wins')
-var gameBoardContainer = document.querySelector('.game-board-container')
+var gameBoardContainer = document.querySelector('.box')
 var box1 = document.getElementById('1')
 var box2 = document.getElementById('2')
 var box3 = document.getElementById('3')
@@ -22,7 +22,7 @@ var boxes = [box1, box2, box3, box4, box5, box6, box7, box8, box9]
 // ----EVENT LISTENERS------
 
 window.addEventListener('load', displayPage)
-// gameBoardContainer.addEventListener('click', playGame)
+gameBoardContainer.addEventListener('click', playGame)
 box1.addEventListener('click', playGame)
 box2.addEventListener('click', playGame)
 box3.addEventListener('click', playGame)
@@ -52,40 +52,34 @@ function playGame(event) {
           boxes[i].innerHTML = ''
           boxes[i].innerHTML += `<img class="box-token" src="assets/kanye.jpeg" alt="">`
           updatePlayerOneStats()
-          disableSquare()
-          thisGame.declareWinner()
-          if(thisGame.winner) {
-            player1Wins.innerText = `Wins:${thisGame.player1.wins}`
-            topMessage.innerText = 'Kanye Won!'
-            thisGame.resetGameBoard()
-          }
+          thisGame.checkForWinner()
       }
     } else if (thisGame.playerTurn === 'O') {
         if (boxes[i].id === event.target.id) {
         boxes[i].innerHTML = ''
-        updatePlayerTwoStats()
         boxes[i].innerHTML += `<img class="box-token" src="assets/pete.jpeg" alt="">`
-        disableSquare()
-        thisGame.declareWinner()
-          if(thisGame.winner) {
-            player2Wins.innerText = `Wins:${thisGame.player2.wins}`
-            topMessage.innerText = 'Pete Won!'
-            thisGame.resetGameBoard()
-        }
-      }
+        updatePlayerTwoStats()
+        thisGame.checkForWinner()
     }
   }
+}
+if (thisGame.winner) {
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].innerHTML = ''
+  }
+  topMessage.innerText = `${thisGame.playerTurn} wins!`
+  player1Wins.innerText = `Wins: ${thisGame.player1.wins}`
+  player2Wins.innerText = `Wins: ${thisGame.player2.wins}`
+  thisGame.resetGameBoard()
+} else {
   thisGame.takeTurn()
-  topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
+
+    }
   }
 }
 
 
-function disableSquare() {
-  if (event.target.classList.contains('disabled') === false) {
-    event.target.classList.add('disabled')
-  }
-}
+
 
 function updatePlayerOneStats() {
   thisGame.player1.boardSpot.push(parseInt(event.target.id))

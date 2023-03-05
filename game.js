@@ -6,17 +6,20 @@ class Game {
     this.firstPlayer = 'X'
     this.turns = 0
     this.activeGame = true
-    this.draw = 'false'
-    this.winner = false
+    this.draw = false
+    this.winner = null
     
-  }takeTurn() {
+  } 
+  takeTurn() {
     if (this.playerTurn === 'X') {
       this.playerTurn = 'O'
+      topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
     } else {
       this.playerTurn = 'X'
+      topMessage.innerText = `It's Player ${thisGame.playerTurn}\'s turn!`
     }
   }
-  declareWinner() {
+  checkForWinner() {
     console.log('is this working')
     var waysToWin = [
     [1,2,3],
@@ -37,6 +40,7 @@ class Game {
         this.player1.wins += 1
         this.winner = true
         this.activeGame = false
+        topMessage.innerText = 'Kanye Won!'
        } else if (
         this.player2.boardSpot.includes(waysToWin[i][0]) &&
         this.player2.boardSpot.includes(waysToWin[i][1]) &&
@@ -45,6 +49,7 @@ class Game {
          this.player2.wins += 1
          this.winner = true
          this.activeGame = false
+         topMessage.innerText = 'Pete Won!'
        }
     }
     this.checkForDraw()
@@ -55,6 +60,7 @@ class Game {
   checkForDraw() {
     if (this.turns === 9 && this.winner === false) {
       this.draw = true
+      this.activeGame = false
     }
   }
   resetGameBoard() {

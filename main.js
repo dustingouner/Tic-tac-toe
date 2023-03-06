@@ -19,7 +19,8 @@ gameBoardContainer.addEventListener('click', playGame)
 // }
 
 function playGame(event) {
-  if (event.target.innerHTML === '' && thisGame.winner === null) {
+  if (event.target.classList.contains('box') && event.target.innerHTML === "" && thisGame.winner === null) {
+    console.log(event.target.classList)
     var boxID = parseInt(event.target.dataset.indexNumber)
     event.target.innerHTML += `<img class="box-token" src="${thisGame.playerTurn.token}" alt="">`
     thisGame.takeTurn(boxID)
@@ -50,14 +51,6 @@ function newGame() {
 }
 
 
-// function updatePlayerOneStats() {
-//   thisGame.player1.boardSpot.push(parseInt(event.target.id))
-//   thisGame.turns += 1
-// }
 
-// function updatePlayerTwoStats() {
-//   thisGame.player2.boardSpot.push(parseInt(event.target.id))
-//   thisGame.turns += 1
-// }
 
 

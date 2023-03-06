@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.player1 = new Player(1, "./assets/kanye.jpeg")
-    this.player2= new Player(2, "./assets/pete.jpeg")
+    this.player1 = new Player(1, "./assets/kanye.png")
+    this.player2= new Player(2, "./assets/pete.png")
     this.playerTurn = this.player1
     this.firstPlayer = this.player1
     this.turns = 0
@@ -15,12 +15,16 @@ class Game {
       this.playerTurn = this.player2
       this.player1.boardSpot.push(boxID)
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>`
+      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
+      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
+      <img class="ref" src="assets/ref.png" alt="ref"></img>`
     } else {
       this.playerTurn = this.player1
       this.player2.boardSpot.push(boxID)
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>`
+      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
+      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
+      <img class="ref" src="assets/ref.png" alt="ref"></img>`
     }
     thisGame.turns += 1
   }
@@ -65,11 +69,15 @@ class Game {
     if (this.playerTurn === this.player1) {
       this.playerTurn = this.player2
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>`
+      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
+      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
+      <img class="ref" src="assets/ref.png" alt="ref"></img>`
     } else {
       this.playerTurn = this.player1
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>`
+      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
+      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
+      <img class="ref" src="assets/ref.png" alt="ref"></img>`
     }
     this.activeGame = true
     this.draw = false

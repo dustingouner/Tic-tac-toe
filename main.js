@@ -20,7 +20,6 @@ gameBoardContainer.addEventListener('click', playGame)
 
 function playGame(event) {
   if (event.target.classList.contains('box') && event.target.innerHTML === "" && thisGame.winner === null) {
-    console.log(event.target.classList)
     var boxID = parseInt(event.target.dataset.indexNumber)
     event.target.innerHTML += `<img class="box-token" src="${thisGame.playerTurn.token}" alt="">`
     thisGame.takeTurn(boxID)
@@ -34,12 +33,12 @@ function playGame(event) {
 function displayResults() {
   if (thisGame.draw) {
     topMessage.innerHTML = ""
-    topMessage.innerHTML += "It's a Draw!"
+    topMessage.innerHTML += "IT'S A DRAW!"
   } else {
     topMessage.innerHTML = ""
     topMessage.innerHTML += `<h2><img class="top-token" src="${thisGame.winner.token}" alt="">WINS!!</h2>`
-    player1Wins.innerText = `Wins: ${thisGame.player1.wins}`
-    player2Wins.innerText = `Wins: ${thisGame.player2.wins}`
+    player1Wins.innerText = `WINS: ${thisGame.player1.wins}`
+    player2Wins.innerText = `WINS: ${thisGame.player2.wins}`
   }
   setTimeout(newGame, 2500)
 }

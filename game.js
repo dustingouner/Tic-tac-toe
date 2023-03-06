@@ -15,16 +15,13 @@ class Game {
       this.playerTurn = this.player2
       this.player1.boardSpot.push(boxID)
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
-      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
-      <img class="ref" src="assets/ref.png" alt="ref"></img>`
+      topMessage.innerHTML += `<h2>IT'S<img class="top-token" src="${thisGame.playerTurn.token}" alt="">TURN!</h2>`
+      
     } else {
       this.playerTurn = this.player1
       this.player2.boardSpot.push(boxID)
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
-      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
-      <img class="ref" src="assets/ref.png" alt="ref"></img>`
+      topMessage.innerHTML += `<h2>IT'S<img class="top-token" src="${thisGame.playerTurn.token}" alt="">TURN!</h2>`
     }
     thisGame.turns += 1
   }
@@ -69,15 +66,13 @@ class Game {
     if (this.playerTurn === this.player1) {
       this.playerTurn = this.player2
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
-      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
-      <img class="ref" src="assets/ref.png" alt="ref"></img>`
+      topMessage.innerHTML += `<h2>IT'S<img class="top-token" src="${thisGame.playerTurn.token}" alt="">TURN!</h2>`
+      
     } else {
       this.playerTurn = this.player1
       topMessage.innerHTML = ""
-      topMessage.innerHTML += `<img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
-      <h2>It's<img class="top-token" src="${thisGame.playerTurn.token}" alt="">turn!</h2>
-      <img class="ref" src="assets/ref.png" alt="ref"></img>`
+      topMessage.innerHTML += `<h2>IT'S<img class="top-token" src="${thisGame.playerTurn.token}" alt="">TURN!</h2>`
+
     }
     this.activeGame = true
     this.draw = false
@@ -87,3 +82,4 @@ class Game {
     this.player2.boardSpot = []
   }
 }
+  

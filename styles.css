@@ -251,6 +251,18 @@ h2 {
   font-size: 15px;
 }
 
+.home-button-two {
+  width: 45%;
+  height: 5%;
+  cursor: pointer;
+  color: blue;
+  background-color: red;
+  border-radius: 10px;
+  border-bottom-color: blue;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 div {
   display: flex;
   justify-content: center;

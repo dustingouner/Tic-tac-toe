@@ -16,6 +16,7 @@ var playerTwoStats = document.querySelector('.player-two-stats-container')
 var homePageAsidePlayerOne = document.querySelector('.home-player-1')
 var homePageAsidePlayerTwo = document.querySelector('.home-player-2')
 var homeButton = document.querySelector('.home-button')
+var homeButtonPlayerTwo = document.querySelector('.home-button-two')
 
 // ----EVENT LISTENERS------
 
@@ -24,11 +25,11 @@ gameBoardContainer.addEventListener('click', playGame)
 homeGameBoardContainer.addEventListener('click', choosePlayer)
 playGameButton.addEventListener('click', letsRumble)
 homeButton.addEventListener('click', backToHome)
+homeButtonPlayerTwo.addEventListener('click', backToHome)
 
 // -----FUNCTIONS------
 
 function choosePlayer(event) {
-  console.log('isthisworking')
   if (thisGame.player1 === null) {
     thisGame.player1 = new Player (1, `./assets/${event.target.id}.png`)
     thisGame.playerTurn = thisGame.player1

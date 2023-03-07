@@ -40,7 +40,6 @@ html, body {
     font-size: 15px;
 }
 
-
 .home-player-1 {
   width: 30%;
   color: white;
@@ -97,7 +96,6 @@ html, body {
   width: 100%;
 }
 
-
 .home-game-board-container {
   display: flex;
   height: 60%;
@@ -137,8 +135,8 @@ html, body {
 }
 
 .logo {
-    height: 80%;
-    width: 80%;
+  height: 80%;
+  width: 80%;
 }
 
 .ref {
@@ -163,15 +161,17 @@ html, body {
 .player-two-stats-container {
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 40%;
   width: 100%;
+  justify-content: flex-start;
 }
 
 .player-one-stats-container {
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 40%;
   width: 100%;
+  justify-content: flex-start;
 }
 
 .center-container {
@@ -192,7 +192,6 @@ html, body {
   height: 100px;
   width: 100px;
 }
-
 
 .box-token {
   width: 50%; 
@@ -216,7 +215,6 @@ h2 {
   width: 30%;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 .top-token {
@@ -225,11 +223,11 @@ h2 {
 }
 
 .game-container {
-    display: flex;
-    height: 80%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: 80%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-board-container {
@@ -241,12 +239,23 @@ h2 {
   cursor: pointer;
 }
 
+.home-button {
+  width: 45%;
+  height: 5%;
+  cursor: pointer;
+  color: blue;
+  background-color: red;
+  border-radius: 10px;
+  border-bottom-color: blue;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  
 }
 
 .right-border {

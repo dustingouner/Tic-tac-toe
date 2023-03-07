@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.player1 = new Player(1, "./assets/kanye.png")
-    this.player2= new Player(2, "./assets/pete.png")
+    this.player1 = null
+    this.player2= null
     this.playerTurn = this.player1
     this.firstPlayer = this.player1
     this.turns = 0

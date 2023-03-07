@@ -9,21 +9,59 @@
   <title>Tic-Tac-Toe</title>
 </head>
 <body>
-  <aside class="sidebar player-1">
+  <aside class="home-player-1">
+    <div>
+      <div class="home-player-one-stats-container">
+        <h1>PLAYER 1</h1>
+        <img class="firstPick" src="assets/kanye.png" alt="kanye west">
+      </div>
+    </div>
+  </aside>
+  <section class="home-page">
+    <div class="home-logo-container">
+      <img class="home-page-logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
+    </div>
+    <div class="home-title-container">
+      <h2 class="home-page-title">CHOOSE YOUR PLAYER</h2>
+      <button class="play-game-button">Play Game</button>
+    </div>
+    <div class="home-game-board-container">
+      <section class="home-game-board">
+        <div class="box right-border bottom-border" data-index-number="1"><img class="box-token player-token" src="assets/chris-rock.png" alt="" id="chris-rock"></div>
+        <div class="box right-border bottom-border" data-index-number="2"><img class="box-token player-token" src="assets/martha-stewart.png" alt="" id="martha-stewart"></div>
+        <div class="box bottom-border" data-index-number="3"><img class="box-token" src="assets/miley-cyrus.png" alt="" id="miley-cyrus"></div>
+        <div class="box right-border bottom-border" data-index-number="4"><img class="box-token" src="assets/nicki-manaj.png" alt="" id="nicki-manaj"></div>
+        <div class="box right-border bottom-border" data-index-number="5"><img class="box-token" src="assets/taylor-swift.png" alt="" id="taylor-swift"></div>
+        <div class="box bottom-border" data-index-number="6"><img class="box-token" src="assets/will-smith.png" alt="" id="will-smith"></div>
+        <div class="box right-border" data-index-number="7"><img class="box-token player-token" src="assets/chuck-norris.png" alt="" id="chuck-norris"></div>
+        <div class="box right-border" data-index-number="8"><img class="box-token player-token" src="assets/pete.png" alt="" id="pete"></div>
+        <div class="box" data-index-number="9"><img class="box-token" src="assets/kanye.png" alt="" id="kanye"></div>
+      </section>
+    </div>
+  </section>
+  <aside class="home-player-2">
+    <div>
+      <div class="home-player-two-stats-container">
+        <h1>PLAYER 2</h1>
+        <img class="secondPick" src="assets/pete.png" alt="pete davidson">
+      </div>
+    </div>
+  </aside>
+  <aside class="sideBar player-1 hidden">
     <div class="logo-container">
       <img class="logo" src="assets/cdm.png" alt="top left celebrity deathmatch logo">
     </div>
     <div class="player-stats">
-      <div class="player-stats-container">
+      <div class="player-one-stats-container">
         <h1>PLAYER 1</h1>
-        <img class="kanye" src="assets/kanye.png" alt="kanye west">
+        <img class="firstPick" src="assets/kanye.png" alt="kanye west">
         <h1 class="player-1-wins">WINS: 0</h1>
-       </div>
+      </div>
+      <button class="home-button">Choose New Player</button>
     </div>
   </aside>
-  <main class="center-container">
+  <main class="center-container hidden">
     <section class="top-message">
-      <h2>IT'S<img class="top-token" src="assets/kanye.png" alt="player token">TURN!</h2>
     </section>
     <section class="game-container">
       <section class="game-board-container">
@@ -39,16 +77,17 @@
       </section>
     </section>
   </main>
-  <aside class="sidebar player-1">
+  <aside class="sideBar player-2 hidden">
     <div class="logo-container">
       <img class="ref" src="assets/ref.png" alt="ref">
     </div>
     <div class="player-stats">
-      <div class="player-stats-container">
+      <div class="player-two-stats-container">
         <h1>PLAYER 2</h1>
-        <img class="pete" src="assets/pete.png" alt="pete davidson">
-        <h1 class="player-2-wins">WINS: 0</h1>
+        <img class="secondPick" src="assets/pete.png" alt="pete davidson">
+        <h1 class="player-2-wins"></h1>
       </div>
+      <button class="home-button-two">Choose New Player</button>
     </div>
   </aside>
   <script src="./game.js" type="text/javascript

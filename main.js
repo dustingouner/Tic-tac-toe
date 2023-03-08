@@ -90,7 +90,7 @@ function displayGame() {
 function playGame(event) {
   if (event.target.classList.contains('box') && event.target.innerHTML === "" && thisGame.winner === null) {
     var boxID = parseInt(event.target.dataset.indexNumber)
-    event.target.innerHTML += `<img class="box-token" src="${thisGame.playerTurn.token}" alt="">`
+    event.target.innerHTML += `<img class="box-token" src="${thisGame.playerTurn.token}" alt="player token">`
     thisGame.takeTurn(boxID)
     thisGame.declareWinner()
   if (thisGame.winner !== null || thisGame.draw) {
@@ -132,15 +132,15 @@ function backToHome() {
   playerTwoSideBar.classList.add('hidden')
   homeGameBoardContainer.innerHTML = ""
   homeGameBoardContainer.innerHTML += `<section class="home-game-board">
-  <div class="box right-border bottom-border" data-index-number="1"><img class="box-token player-token" src="assets/chris-rock.png" alt="" id="chris-rock"></div>
-  <div class="box right-border bottom-border" data-index-number="2"><img class="box-token player-token" src="assets/martha-stewart.png" alt="" id="martha-stewart"></div>
-  <div class="box bottom-border" data-index-number="3"><img class="box-token" src="assets/miley-cyrus.png" alt="" id="miley-cyrus"></div>
-  <div class="box right-border bottom-border" data-index-number="4"><img class="box-token" src="assets/nicki-manaj.png" alt="" id="nicki-manaj"></div>
-  <div class="box right-border bottom-border" data-index-number="5"><img class="box-token" src="assets/taylor-swift.png" alt="" id="taylor-swift"></div>
-  <div class="box bottom-border" data-index-number="6"><img class="box-token" src="assets/will-smith.png" alt="" id="will-smith"></div>
-  <div class="box right-border" data-index-number="7"><img class="box-token player-token" src="assets/chuck-norris.png" alt="" id="chuck-norris"></div>
-  <div class="box right-border" data-index-number="8"><img class="box-token player-token" src="assets/pete.png" alt="" id="pete"></div>
-  <div class="box" data-index-number="9"><img class="box-token" src="assets/kanye.png" alt="" id="kanye"></div>`
+  <div class="box right-border bottom-border" data-index-number="1"><img class="box-token player-token" src="assets/chris-rock.png" alt="chris rock" id="chris-rock"></div>
+  <div class="box right-border bottom-border" data-index-number="2"><img class="box-token player-token" src="assets/martha-stewart.png" alt="martha stewart" id="martha-stewart"></div>
+  <div class="box bottom-border" data-index-number="3"><img class="box-token" src="assets/miley-cyrus.png" alt="miley cyrus" id="miley-cyrus"></div>
+  <div class="box right-border bottom-border" data-index-number="4"><img class="box-token" src="assets/nicki-manaj.png" alt="nicki manaj" id="nicki-manaj"></div>
+  <div class="box right-border bottom-border" data-index-number="5"><img class="box-token" src="assets/taylor-swift.png" alt="taylor swift" id="taylor-swift"></div>
+  <div class="box bottom-border" data-index-number="6"><img class="box-token" src="assets/will-smith.png" alt="will smith" id="will-smith"></div>
+  <div class="box right-border" data-index-number="7"><img class="box-token player-token" src="assets/chuck-norris.png" alt="chuck norris" id="chuck-norris"></div>
+  <div class="box right-border" data-index-number="8"><img class="box-token player-token" src="assets/pete.png" alt="pete davidson" id="pete"></div>
+  <div class="box" data-index-number="9"><img class="box-token" src="assets/kanye.png" alt="kanye west" id="kanye"></div>`
 }
 
 

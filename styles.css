@@ -161,7 +161,7 @@ html, body {
 .player-two-stats-container {
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 53%;
   width: 100%;
   justify-content: flex-start;
 }
@@ -169,7 +169,7 @@ html, body {
 .player-one-stats-container {
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 53%;
   width: 100%;
   justify-content: flex-start;
 }
@@ -240,8 +240,8 @@ h2 {
 }
 
 .home-button {
-  width: 45%;
-  height: 5%;
+  width: 63%;
+  height: 10%;
   cursor: pointer;
   color: blue;
   background-color: red;
@@ -252,8 +252,8 @@ h2 {
 }
 
 .home-button-two {
-  width: 45%;
-  height: 5%;
+  width: 63%;
+  height: 10%;
   cursor: pointer;
   color: blue;
   background-color: red;
